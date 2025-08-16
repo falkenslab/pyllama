@@ -1,0 +1,44 @@
+[project]
+name = "pyllama"
+version = "0.1.0"
+description = "Cliente Python que interactúa con la API de Ollama y utiliza funciones"
+authors = [
+    {name = "Francisco Vargas Ruiz", email = "4354486+fvarrui@users.noreply.github.com"},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",    
+]
+keywords = [
+    "ollama",
+    "api",
+    "cliente",
+    "funciones"
+]
+dependencies = [
+    "docstring_parser",     # Para analizar docstrings
+    "ollama",               # Cliente para API de OLlama
+]
+requires-python = ">=3.12"
+
+[build-system]
+requires      = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = ["black", "bumpver", "isort", "pip-tools", "pytest"]
+
+[project.urls]
+Home = "https://github.com/falkenslab/ollama-python-test"
+Documentation = "https://github.com/falkenslab/ollama-python-test/blob/main/README.md"
+Source = "https://github.com/falkenslab/ollama-python-test"
+Issues = "https://github.com/falkenslab/ollama-python-test/issues"
+
+[project.scripts]
+pyllama = "pyllama.__main__:main"
+
+[tool.setuptools]
+include-package-data = true
